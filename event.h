@@ -25,7 +25,7 @@ struct Writeback {
 };
 
 struct Exception {
-  const std::string msg;
+  const std::string_view msg;
 };
 
 typedef std::variant<Op1Fetch, Op2Fetch, Execution, Writeback, Exception> ExecutionEvent;

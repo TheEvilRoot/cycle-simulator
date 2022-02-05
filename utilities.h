@@ -15,7 +15,7 @@ template<class... Ts> overloaded(Ts...)->overloaded<Ts...>;
 
 template<typename T>
 inline auto hexdump(const T* data, const std::size_t size) {
-  for (auto i = 0; i < size; i++) {
+  for (std::size_t i = 0; i < size; i++) {
     if (i > 0 && i % 16 == 0) fprintf(stderr, "\n");
     if (i > 0 && i % 2 == 0) fprintf(stderr, " ");
     fprintf(stderr, "%02x", data[i]);
